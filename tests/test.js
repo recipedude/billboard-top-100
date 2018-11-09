@@ -18,16 +18,13 @@ billboard('hot-100', '2016-11-19', function (err, songs) {
     console.log('ERROR!')
     console.log(err)
   } else {
-
     // check if first rank is present
     if (songs[0].rank !== '1') {
       console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
       console.log('FAIL!!! - Rank 1 is missing!')
       console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     }
-
-    console.log(songs)
-
+    console.log(JSON.stringify(songs, null, 2))
   }
   console.log('--- hot-100 - finish ---')
 })
